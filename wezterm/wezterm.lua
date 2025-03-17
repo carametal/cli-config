@@ -53,6 +53,26 @@ config.keys = {
     mods = 'CMD',
     action = wezterm.action.ActivatePaneDirection 'Down',
   },
+  {
+    key = 'RightArrow',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.AdjustPaneSize { 'Right', 5 }
+  },
+  {
+    key = 'LeftArrow',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.AdjustPaneSize { 'Left', 5 }
+  },
+  {
+    key = 'UpArrow',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.AdjustPaneSize { 'Up', 5 }
+  },
+  {
+    key = 'DownArrow',
+    mods = 'CMD|SHIFT',
+    action = wezterm.action.AdjustPaneSize { 'Down', 5 }
+  },
 }
 
 return config
