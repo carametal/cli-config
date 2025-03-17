@@ -23,3 +23,12 @@ vim.opt.scrolloff = 5
 
 -- キーバインド
 vim.keymap.set("i", "<C-j>", "<Esc>")
+
+-- autocmd
+vim.api.nvim_create_autocmd("InsertLeave", {
+  pattern = "*",
+  callback = function()
+    os.execute("im-select com.apple.keylayout.ABC")
+    -- os.execute("im-select 1033") -- Windows (英語)
+  end,
+})
